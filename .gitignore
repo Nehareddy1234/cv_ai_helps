@@ -201,6 +201,10 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 
+# Downloaded model checkpoints and local QGIS cache files
+weights/*.pth
+*_styles.db
+
 # Marimo
 marimo/_static/
 marimo/_lsp/
