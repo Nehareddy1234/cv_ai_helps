@@ -1,0 +1,11 @@
+# Exact bytes are required by the accepted-reference SHA-256 audit on every OS.
+samgeo_esri_test/segment_full_rectangle.py -text
+samgeo_esri_test/compose_full_rectangle.py -text
+samgeo_esri_test/classify_full_rectangle.py -text
+bhadra_highres_batches/** -text
+*.geojson -text
+*.gpkg binary
+*.tif binary
+*.joblib binary
+*.npz binary
+*.qgz binary

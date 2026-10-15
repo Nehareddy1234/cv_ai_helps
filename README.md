@@ -1,9 +1,31 @@
 # Bhadra Esri — current SAM ViT-H work
 
-This repository contains the saved Esri test rectangle and the SAM-based work
-from October 14–15, 2026. It is no longer a QGIS plugin source checkout.
+This repository contains the saved Esri test rectangle and the whole-region
+Bhadra SAM ViT-H workflow from October 14–15, 2026. It is no longer a QGIS plugin
+source checkout. The workflows are kept in separate folders.
 
-## Open this project
+## Current whole-region workflow — high-resolution batches
+
+Use **[the laptop resume instructions](bhadra_highres_batches/CONTINUE_ON_ANOTHER_LAPTOP.md)**.
+The current result is `bhadra_highres_batches/output/bhadra_highres_classification.gpkg`.
+It is **PARTIAL / provisional**, preserves the accepted seed, and continues a
+1,860-batch queue at the original ~0.485 m output grid with SAM ViT-H.
+The transfer-time GeoJSON is `bhadra_highres_batches/output/classified_regions_PARTIAL.geojson`.
+Open `bhadra_highres_batches/Bhadra_Resume_PARTIAL.qgs` in QGIS on the new laptop.
+
+## Rejected coarse whole-region experiment — audit only
+
+See [bhadra_full_region/README.md](bhadra_full_region/README.md) for processing,
+verification and limitations. Its GeoPackage target is
+`bhadra_full_region/output/bhadra_sam_vit_h_classification.gpkg`; the separate QGIS
+project is `bhadra_full_region/Bhadra_Whole_Region_SAM_ViT_H.qgz`.
+
+This uses the original saved AOI and approximately 19 m Esri imagery. It was
+rejected for insufficient detail; do not use it to resume the current run.
+Only the required Esri image and AOI were recovered from the cleanup archive;
+the old experiments remain archived. No Sentinel imagery is used.
+
+## Saved high-resolution test project
 
 **[Bhadra_Esri_SAM_ViT_H_Current.qgz](samgeo_esri_test/Bhadra_Esri_SAM_ViT_H_Current.qgz)**
 
@@ -21,6 +43,10 @@ all 2,634 original segment geometries and source labels for audit.
 
 - `samgeo_esri_test/`: current project, scripts, source imagery, cached SAM masks,
   classification evidence, current results and verification reports.
+- `bhadra_full_region/`: separate whole-AOI Esri source, SAM ViT-H workflow,
+  rejected coarse outputs and verification, preserved for audit only.
+- `bhadra_highres_batches/`: current detailed batch workflow, paused checkpoint,
+  GeoPackage, GeoJSON, source evidence, review previews and migration instructions.
 - `weights/`: local SAM ViT-H checkpoint, excluded from Git because of its size.
 - `requirements.txt`: versions used in the local Python 3.11 environment.
 - `LICENSE`: retained original repository license notice.

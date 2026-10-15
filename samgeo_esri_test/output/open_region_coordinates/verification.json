@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "regions": 335,
+  "total_area_m2": 232445.8456872558,
+  "centroids_outside_region": 27,
+  "interior_points_all_inside": true,
+  "source_unchanged": true,
+  "maximum_geojson_roundtrip_error_m": 0.007684308572024777
+}

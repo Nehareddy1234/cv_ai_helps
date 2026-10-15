@@ -1,0 +1,4 @@
+{
+  "stop_requested": true,
+  "reason": "User requested pause and migration to another laptop; do not resume on this laptop."
+}

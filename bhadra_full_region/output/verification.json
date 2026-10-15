@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "area_km2": 1107.3285860574708,
+  "region_count": 8132,
+  "counts_by_class": {
+    "Uncertain / mixed": 3636,
+    "Trees / dense woody vegetation": 2633,
+    "Crops / grass / low vegetation": 1099,
+    "Bare soil / rock / sparse ground": 633,
+    "Water": 131
+  },
+  "area_km2_by_class": {
+    "Bare soil / rock / sparse ground": 43.75753243777453,
+    "Crops / grass / low vegetation": 15.745723090722832,
+    "Trees / dense woody vegetation": 583.0412121790229,
+    "Uncertain / mixed": 437.07659043491714,
+    "Water": 27.707527915033477
+  },
+  "uncertain_area_percent": 39.471264079895505,
+  "segmentation": {
+    "completed_sam_tiles": 12,
+    "whole_image_context_pass": true,
+    "global_inference_size": [
+      709,
+      1024
+    ],
+    "global_context_pixel_size_mercator_m": [
+      62.09834737977478,
+      62.10508548170401
+    ],
+    "sam_proposals_retained": 484,
+    "sam_proposals_rejected": 192,
+    "gap_completion_pixel_percent": 77.68990203164144,
+    "regions_by_origin": {
+      "Image-edge gap completion": 7621,
+      "SAM ViT-H": 510,
+      "No valid imagery": 1
+    }
+  },
+  "source_pixel_size_mercator_m": [
+    19.10925707129354,
+    19.10925707129354
+  ],
+  "overlap_m2_mercator": -1.430511474609375e-06,
+  "uncovered_m2_mercator": 0.0,
+  "outside_m2_mercator": 0.0,
+  "vector_raster_identical": true,
+  "interior_coordinates_verified": true,
+  "open_ground_subset_verified": true,
+  "model": "SAM ViT-H for boundaries; separate RGB forest for labels",
+  "image_sha256": "fae96798f183e052ab726651f0b94c3cd02bb12f3a8b3e9bec394a33742d4265",
+  "aoi_sha256": "6b6094b2d67ad78bba0a01a4c86cdb534df92bdcb7e98a94a2dc1eaeb84af62c",
+  "limitations": [
+    "Training labels come from one small scene and are not surveyed ground truth",
+    "Performance over the rest of Bhadra is unvalidated; every automatic label needs review",
+    "No reliable individual buildings, industrial structures or roads at this image resolution",
+    "No NIR, elevation or road-distance features are used",
+    "SAM does not supply semantic class names",
+    "Gaps are completed by image-edge segmentation, with origin retained",
+    "Visible clouds occur in the source; RGB bright-surface/shadow warnings are conservative and not a validated cloud mask",
+    "The saved project boundary is used, not a newly verified official reserve boundary",
+    "Merged output includes uncertain regions and must not be interpreted as confirmed land cover"
+  ],
+  "water_cloud_review": {
+    "regions_flagged_uncertain": 97,
+    "area_km2": 5.478086080722223,
+    "bright_proximity_pixels": 150,
+    "region_fraction_threshold": 0.1,
+    "interpretation": "Conservative RGB uncertainty flag; may include genuine water near bright surfaces"
+  }
+}

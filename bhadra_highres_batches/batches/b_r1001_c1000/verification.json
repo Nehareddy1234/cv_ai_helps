@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "batch_id": "b_r1001_c1000",
+  "geometry": {
+    "valid": true,
+    "regions": 941,
+    "overlap_m2": -6.984919309616089e-10,
+    "gap_m2": 0.0,
+    "outside_m2": 0.0,
+    "uncertain_area_percent": 39.1495251340182
+  },
+  "segmentation": {
+    "gap_completion_pixel_percent": 11.842367737245793,
+    "sliver_cleanup": {
+      "merged_fragments": 6657,
+      "reassigned_pixels": 25666,
+      "minimum_pixels": 40
+    }
+  },
+  "counts_by_class": {
+    "Uncertain / mixed": 573,
+    "Trees / dense woody vegetation": 256,
+    "Bare soil / rock / sparse ground": 59,
+    "Crops / grass / low vegetation": 28,
+    "Water": 17,
+    "Buildings / roofs": 7,
+    "Roads / tracks / paved surfaces": 1
+  },
+  "area_m2_by_class": {
+    "Bare soil / rock / sparse ground": 22498.59103534028,
+    "Buildings / roofs": 411.86652277147476,
+    "Crops / grass / low vegetation": 34342.046939383705,
+    "Roads / tracks / paved surfaces": 0.9408715538755021,
+    "Trees / dense woody vegetation": 169062.38692595527,
+    "Uncertain / mixed": 207651.0576243825,
+    "Water": 96438.15819688814
+  },
+  "context": {
+    "supported_road_polygons": 3,
+    "accepted_footprints": 116
+  },
+  "image_sha256": "faa999e4047e2bfca4532157988d6033b85506f31aaaa7e65564b52578ad5e11",
+  "gpkg_sha256": "05701b38846659413f7d98feb75e0dc98acaa0f7d563ceaa7b63cb87511a52d0",
+  "classifier_sha256": "6b20051872b1722fd09ff30b4ac9000eeffab3d61269cc3ffcebcb6a4b5239f8",
+  "pipeline_sha256": "8b47056baebabbc8367e0ef2bad1fafad681fe4de912515836940b912fa8815b",
+  "pixel_size_m": [
+    0.484992610681435,
+    0.48499272632797674
+  ],
+  "limitations": [
+    "Same scene classifier, not independent whole-AOI accuracy",
+    "Scene-specific numbered overrides are not transferred",
+    "Road/roof/industrial labels need supported local context or new visual review",
+    "SAM and explicitly tagged image-edge gap completion remain distinct",
+    "Batch-edge objects can be split; core partitions prevent overlaps"
+  ]
+}

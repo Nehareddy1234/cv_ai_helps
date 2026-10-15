@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-15T15:56:01.066927+00:00",
+  "note": "Inspected actual Esri source, eight-class preview and combined preview. Reservoir and channel masks follow the visible shoreline without covering the peninsula as water; field and pond boundaries and small crown-like patches are retained. Mixed scrub/open-ground areas, unsupported roads and roofs remain uncertain (39.15 percent of area); do not interpret cyan as confident recognition. Original pixel-grid and tile-settings audit passed. User explicitly confirmed continuation of the same method for the rest of the AOI. Approve as provisional workflow output only, not pixel-perfect or independently validated semantic accuracy.",
+  "gpkg_sha256": "05701b38846659413f7d98feb75e0dc98acaa0f7d563ceaa7b63cb87511a52d0",
+  "review_scope": "Visual QA, not field accuracy"
+}

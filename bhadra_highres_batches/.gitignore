@@ -1,0 +1,18 @@
+# Keep source imagery, results and audits for completed batches in the handoff.
+batches/*/sam/
+batches/*/xyz/
+batches/*/rejected-placeholder-source/
+logs/
+worker.lock
+worker_status.json
+progress.json
+__pycache__/
+transfer-check-*/
+*.qgz~
+output/*.gpkg-journal
+output/*.gpkg-wal
+output/*.gpkg-shm
+*.tmp
+**/*.gpkg-journal
+**/*.gpkg-wal
+**/*.gpkg-shm

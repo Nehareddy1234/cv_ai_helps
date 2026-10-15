@@ -1,0 +1,77 @@
+{
+  "utc": "2026-10-15T17:51:02.855155+00:00",
+  "passed": true,
+  "seed_pixels_identical": true,
+  "seed_combined_pixels_identical": true,
+  "sam_tile_windows_and_settings_identical": true,
+  "pixel_size_m": [
+    0.484992610681435,
+    0.48499272632797674
+  ],
+  "checked_batches": [
+    {
+      "batch_id": "b_r0999_c1000",
+      "same_pixel_spacing": true,
+      "aligned_to_original_pixel_grid": true,
+      "same_image_dimensions": true,
+      "native_zoom": 18,
+      "uncertain_area_percent": 37.23160978201797
+    },
+    {
+      "batch_id": "b_r0999_c1001",
+      "same_pixel_spacing": true,
+      "aligned_to_original_pixel_grid": true,
+      "same_image_dimensions": true,
+      "native_zoom": 18,
+      "uncertain_area_percent": 15.24462031068052
+    },
+    {
+      "batch_id": "b_r1000_c0999",
+      "same_pixel_spacing": true,
+      "aligned_to_original_pixel_grid": true,
+      "same_image_dimensions": true,
+      "native_zoom": 18,
+      "uncertain_area_percent": 5.272584907509578
+    },
+    {
+      "batch_id": "b_r1000_c1001",
+      "same_pixel_spacing": true,
+      "aligned_to_original_pixel_grid": true,
+      "same_image_dimensions": true,
+      "native_zoom": 18,
+      "uncertain_area_percent": 51.64408328386456
+    },
+    {
+      "batch_id": "b_r1001_c0999",
+      "same_pixel_spacing": true,
+      "aligned_to_original_pixel_grid": true,
+      "same_image_dimensions": true,
+      "native_zoom": 18,
+      "uncertain_area_percent": 5.065192466336256
+    },
+    {
+      "batch_id": "b_r1001_c1000",
+      "same_pixel_spacing": true,
+      "aligned_to_original_pixel_grid": true,
+      "same_image_dimensions": true,
+      "native_zoom": 18,
+      "uncertain_area_percent": 39.1495251340182
+    },
+    {
+      "batch_id": "b_r1001_c1001",
+      "same_pixel_spacing": true,
+      "aligned_to_original_pixel_grid": true,
+      "same_image_dimensions": true,
+      "native_zoom": 18,
+      "uncertain_area_percent": 37.89542322905287
+    }
+  ],
+  "semantic_accuracy_verified": false,
+  "limitations": [
+    "This checks original grid and workflow consistency, not correct labels or perfect boundaries.",
+    "Original method scores pixels then labels segments; it is not independent per-pixel semantic classification.",
+    "Original 40-pixel fragment cleanup (~9.4 square metres) remains; it does not preserve every one-pixel detail.",
+    "SAM global context proposals are resized internally; small 1024x768 tile passes retain the original detailed sampling.",
+    "Matching cyan display includes uncertain regions; cyan does not imply confident identification."
+  ]
+}

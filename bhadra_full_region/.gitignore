@@ -1,0 +1,6 @@
+__pycache__/
+cache/*.npz
+cache/*.json
+progress.json
+*.qgz~
+output/*.png

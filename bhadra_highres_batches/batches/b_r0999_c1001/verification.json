@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "batch_id": "b_r0999_c1001",
+  "geometry": {
+    "valid": true,
+    "regions": 1375,
+    "overlap_m2": -2.3283064365386963e-10,
+    "gap_m2": 0.0,
+    "outside_m2": 0.0,
+    "uncertain_area_percent": 15.24462031068052
+  },
+  "segmentation": {
+    "gap_completion_pixel_percent": 11.453302809016927,
+    "sliver_cleanup": {
+      "merged_fragments": 6676,
+      "reassigned_pixels": 30908,
+      "minimum_pixels": 40
+    }
+  },
+  "counts_by_class": {
+    "Uncertain / mixed": 626,
+    "Trees / dense woody vegetation": 304,
+    "Crops / grass / low vegetation": 241,
+    "Bare soil / rock / sparse ground": 184,
+    "Water": 20
+  },
+  "area_m2_by_class": {
+    "Bare soil / rock / sparse ground": 107720.14900109149,
+    "Crops / grass / low vegetation": 208907.82680269438,
+    "Trees / dense woody vegetation": 220945.5726825869,
+    "Uncertain / mixed": 102581.34379091318,
+    "Water": 32747.034437436778
+  },
+  "context": {
+    "supported_road_polygons": 0,
+    "accepted_footprints": 2
+  },
+  "image_sha256": "da0f2c9c0bdc575f3eff01647fcb68dfc75091b17bde2aa31198f9c697e8afd5",
+  "gpkg_sha256": "9181fa9bd34da193bf2d252f4b6da7521d6753117fad2591c3872137b17e0a6c",
+  "classifier_sha256": "6b20051872b1722fd09ff30b4ac9000eeffab3d61269cc3ffcebcb6a4b5239f8",
+  "pipeline_sha256": "8b47056baebabbc8367e0ef2bad1fafad681fe4de912515836940b912fa8815b",
+  "pixel_size_m": [
+    0.484992610681435,
+    0.48499272632797674
+  ],
+  "limitations": [
+    "Same scene classifier, not independent whole-AOI accuracy",
+    "Scene-specific numbered overrides are not transferred",
+    "Road/roof/industrial labels need supported local context or new visual review",
+    "SAM and explicitly tagged image-edge gap completion remain distinct",
+    "Batch-edge objects can be split; core partitions prevent overlaps"
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "created_utc": "2026-10-15T17:52:39.100590+00:00",
+  "state": "paused_for_transfer",
+  "whole_aoi_complete": false,
+  "region_count": 11073,
+  "progress": {
+    "updated_utc": "2026-10-15T17:52:39.121683+00:00",
+    "whole_aoi_complete": false,
+    "queue_exhausted": false,
+    "aoi_area_km2": 1107.3286571929289,
+    "verified_area_km2": 5.383215413717784,
+    "verified_area_percent": 0.4861443238870202,
+    "batches": [
+      {
+        "status": "complete",
+        "count": 7,
+        "area_m2": 4482342.1912088
+      },
+      {
+        "status": "pending",
+        "count": 1853,
+        "area_m2": 1101945441.779211
+      }
+    ],
+    "attention_or_active": []
+  },
+  "files": {
+    "output/bhadra_highres_classification.gpkg": {
+      "sha256": "9a23ef61ee5ca92d934a3a94db054f32ea14a3c483d29db2c5410c8393a66bf7",
+      "bytes": 29003776
+    },
+    "output/classified_regions_PARTIAL.geojson": {
+      "sha256": "5dfc6a20aa98412eb50de5a9c5c177eaf49f3898343031f06aaf7518e27776d6",
+      "bytes": 59813323
+    },
+    "manifest.json": {
+      "sha256": "5bf7dc9bc03643a79e6c6c558b4d9a1b89fb07cf14f0478ee3707131c34b0721",
+      "bytes": 2722
+    },
+    "Bhadra_Resume_PARTIAL.qgs": {
+      "sha256": "317990194dddfa4446e84cf6d54822497901f3dbfabb1bf2536837d57eee1cc3",
+      "bytes": 197695
+    },
+    "output/combined_display.qml": {
+      "sha256": "509714cd13c5df83fa85a758c4f8c225ace81dbc2badbd2852c74925611b8684",
+      "bytes": 2209
+    },
+    "output/classified_regions.qml": {
+      "sha256": "5bfc8eb7c6f40d05d748bc505da82d717abebf84d47ae274a097c32a12658a7f",
+      "bytes": 5435
+    },
+    "batches/b_r0999_c1000/classes.tif": {
+      "sha256": "8541e4cc9e4f413de5a088121803c90b86e94b255407a486a599d0563bf64182",
+      "bytes": 59425
+    },
+    "batches/b_r0999_c1000/classified.gpkg": {
+      "sha256": "07e893d683cef164b2a10ccf1db896c79a4cb1ab56999869d068c0dd8c4e0ec8",
+      "bytes": 4820992
+    },
+    "batches/b_r0999_c1000/esri_rgb.tif": {
+      "sha256": "2b38a523b77099a98d9a770ceabcf299d7e8b2e79c9899919f05b8cb2b91dc7b",
+      "bytes": 8478102
+    },
+    "batches/b_r0999_c1000/imagery.json": {
+      "sha256": "1911a9af9eb047fe90fe22e04d074f76a4003a3bd349aefdcc8b8b505a0a0914",
+      "bytes": 565
+    },
+    "batches/b_r0999_c1000/preview_combined.png": {
+      "sha256": "99258790b2fd0555d99aa5e3fa7c26a98802a451d8fa70597e9d8794b6ac0faf",
+      "bytes": 2931581
+    },
+    "batches/b_r0999_c1000/published.json": {
+      "sha256": "d78c76fd2ddd3f303eb8c316e5348f4a8d08c30dcfeee694209707ae228ad860",
+      "bytes": 189
+    },
+    "batches/b_r0999_c1000/verification.json": {
+      "sha256": "40d59ba7c7009c9c2e71767a2106c553c9a04b0abe1b6502f968b8b4665d414a",
+      "bytes": 1875
+    },
+    "batches/b_r0999_c1001/classes.tif": {
+      "sha256": "6e23848b944c386aea7e37ddd3209534a72ca17a3b4554623d788aa989b14ba2",
+      "bytes": 59323
+    },
+    "batches/b_r0999_c1001/classified.gpkg": {
+      "sha256": "9181fa9bd34da193bf2d252f4b6da7521d6753117fad2591c3872137b17e0a6c",
+      "bytes": 3670016
+    },
+    "batches/b_r0999_c1001/esri_rgb.tif": {
+      "sha256": "da0f2c9c0bdc575f3eff01647fcb68dfc75091b17bde2aa31198f9c697e8afd5",
+      "bytes": 8053331
+    },
+    "batches/b_r0999_c1001/imagery.json": {
+      "sha256": "bd4b7588fe01de0c00ad57fa6e1ad5978f916524e7ed97d3f89dfb89ef9cf993",
+      "bytes": 565
+    },
+    "batches/b_r0999_c1001/preview_combined.png": {
+      "sha256": "58f77970b9ef5646e75522c48ad15b2f6ef9a123134eb08a7ccf73d30858ad2f",
+      "bytes": 2789821
+    },
+    "batches/b_r0999_c1001/published.json": {
+      "sha256": "91d55d46197bd30e5099e0a0cda2f4d8bb193088fb0073df4337719aa2ca4d38",
+      "bytes": 189
+    },
+    "batches/b_r0999_c1001/verification.json": {
+      "sha256": "a31461a537e9e21de2838741b82486c3e8aa660ee8a701f593ceeea5f7413fe0",
+      "bytes": 1875
+    },
+    "batches/b_r1000_c0999/classes.tif": {
+      "sha256": "167ca3df84d60e033a3bf67721e28bfe179576efccf4206ac765159e6f6ea235",
+      "bytes": 14850
+    },
+    "batches/b_r1000_c0999/classified.gpkg": {
+      "sha256": "415225764916037d9a7839beef3219e8e2635a93b7069e804fb0c62784a0d5b6",
+      "bytes": 569344
+    },
+    "batches/b_r1000_c0999/esri_rgb.tif": {
+      "sha256": "d33a3dbbb44bffd563eadcc423e08f178732f739d59d1e96f72f1821830890f3",
+      "bytes": 1719843
+    },
+    "batches/b_r1000_c0999/imagery.json": {
+      "sha256": "52c85ddb55bac1f40268430b50096d776c95c4185c4504a86c09b4e809d701c4",
+      "bytes": 565
+    },
+    "batches/b_r1000_c0999/preview_combined.png": {
+      "sha256": "81419f73b916d1e3aa4e9cbe714b120b041d4183731efaf4cf3b80a93fb61132",
+      "bytes": 767678
+    },
+    "batches/b_r1000_c0999/published.json": {
+      "sha256": "b0aa0f100a495d9e07d993b36392781c80a89b745f38cc4a0e55c30725e4417c",
+      "bytes": 188
+    },
+    "batches/b_r1000_c0999/verification.json": {
+      "sha256": "d5242887936419256eb0adc5454ad5a3c2392b95f612ab17fd28705b282a4b52",
+      "bytes": 1763
+    },
+    "batches/b_r1000_c1001/classes.tif": {
+      "sha256": "6390a8889b7e6a60fe6a72c3557c4066bb81a6dd79a1fb233457d863aa410451",
+      "bytes": 40179
+    },
+    "batches/b_r1000_c1001/classified.gpkg": {
+      "sha256": "312f144f8c03e065af941cf60db2b94e4a7f5dcb6eba31cdea94cf049dbe0277",
+      "bytes": 4780032
+    },
+    "batches/b_r1000_c1001/esri_rgb.tif": {
+      "sha256": "26bef83d3bcf82ee7141fd5467154015c91e8644b085a983b5b77529ebffcaee",
+      "bytes": 8531287
+    },
+    "batches/b_r1000_c1001/imagery.json": {
+      "sha256": "ef9de7a7e3f76cf76f4a8a13101b094960a2be4de31a50cbaf96d2d7ecbfe0c9",
+      "bytes": 565
+    },
+    "batches/b_r1000_c1001/preview_combined.png": {
+      "sha256": "d1d6ad65c214bd15bc604da8df7c23a4a32b8bf6dc2eef296c213d9b13e4a3ce",
+      "bytes": 2830538
+    },
+    "batches/b_r1000_c1001/published.json": {
+      "sha256": "ab37392380232d95f151ccbda5b238bb765d39ab92dc0e267f3b99a5ca5fb695",
+      "bytes": 189
+    },
+    "batches/b_r1000_c1001/verification.json": {
+      "sha256": "eaaf2ec5c0c44d89de4d3c176ffca39335c766159cee1ad45752e4a74e908497",
+      "bytes": 1950
+    },
+    "batches/b_r1001_c0999/classes.tif": {
+      "sha256": "ab9ac174620299dff776762065ba770781feceea4f59487370fc42d8b49b96c0",
+      "bytes": 11683
+    },
+    "batches/b_r1001_c0999/classified.gpkg": {
+      "sha256": "7c75dc4426eb349c9f86d1e8ea26e4e444fe484d60726bd58e59c859c68b990c",
+      "bytes": 479232
+    },
+    "batches/b_r1001_c0999/esri_rgb.tif": {
+      "sha256": "8f1db445f6b04a42c46280c85e03fe3c1b95270ba42a410a103c726f390e3e2f",
+      "bytes": 898485
+    },
+    "batches/b_r1001_c0999/imagery.json": {
+      "sha256": "580bd96dc2613f9075a69c5e15dd05d807511129c6223ffacfd2d28e3ec8557d",
+      "bytes": 565
+    },
+    "batches/b_r1001_c0999/preview_combined.png": {
+      "sha256": "622f07b09fe0ef1cfd89067bf92400d44d7268e9e042426706616ae45fd80178",
+      "bytes": 477249
+    },
+    "batches/b_r1001_c0999/published.json": {
+      "sha256": "8b1c07935816f409b8c3e7bfc99800dda7d939b12ad15d84a99c8089c0e80283",
+      "bytes": 188
+    },
+    "batches/b_r1001_c0999/verification.json": {
+      "sha256": "819a510bef9f9cd8abfb82abf7fa90270650e2d8316af4c8c844550f011dca1d",
+      "bytes": 1741
+    },
+    "batches/b_r1001_c1000/classes.tif": {
+      "sha256": "8d040c74a895b425deab9e4aea46f4b11c6ad72530e1dedeee4916caf5ea7641",
+      "bytes": 42514
+    },
+    "batches/b_r1001_c1000/classified.gpkg": {
+      "sha256": "05701b38846659413f7d98feb75e0dc98acaa0f7d563ceaa7b63cb87511a52d0",
+      "bytes": 2904064
+    },
+    "batches/b_r1001_c1000/esri_rgb.tif": {
+      "sha256": "faa999e4047e2bfca4532157988d6033b85506f31aaaa7e65564b52578ad5e11",
+      "bytes": 7517999
+    },
+    "batches/b_r1001_c1000/imagery.json": {
+      "sha256": "7c8fc117fc8ed3d3e022cbeb8d84e5aa9a12ebb4c035443ca2da6609a48c0916",
+      "bytes": 565
+    },
+    "batches/b_r1001_c1000/preview.png": {
+      "sha256": "db4f9f1524b58c893422c3d8068cccd74ad1e99f5e5caf1577d754b531349c0f",
+      "bytes": 2428139
+    },
+    "batches/b_r1001_c1000/preview_combined.png": {
+      "sha256": "66a1259f9243e85fbc25cfff17671dcdee4abd25e13bcabaaa1d1f327a4ec592",
+      "bytes": 2427395
+    },
+    "batches/b_r1001_c1000/published.json": {
+      "sha256": "6bf76809f2bb4f0410de7cc841886a2a1f59cfa9ce356730e112c3d1aaf5b404",
+      "bytes": 188
+    },
+    "batches/b_r1001_c1000/review_approval.json": {
+      "sha256": "3b9c726f02ea00a2a1b3a6089ef92ef0c3fd2c930e089c343a740b004e7df976",
+      "bytes": 833
+    },
+    "batches/b_r1001_c1000/verification.json": {
+      "sha256": "9df1e831d234095e6a1e56883b4f690af753ad4edfc0079d54ce1cc9c579de0a",
+      "bytes": 2048
+    },
+    "batches/b_r1001_c1001/classes.tif": {
+      "sha256": "d6edf5e8d6028f47fe6032e5837144bae1480927b9eaf361aa8fef35652edee6",
+      "bytes": 45958
+    },
+    "batches/b_r1001_c1001/classified.gpkg": {
+      "sha256": "2670359f71e01d91ea409f33760232ad723baad92fbf848dd5ffb14acbc42a3c",
+      "bytes": 4468736
+    },
+    "batches/b_r1001_c1001/esri_rgb.tif": {
+      "sha256": "4f2aaba42c495fae0cfac3abc105cb0bb19e0f31a892b0f5fe57f658263498b4",
+      "bytes": 8469547
+    },
+    "batches/b_r1001_c1001/imagery.json": {
+      "sha256": "605fd450ac7284c1cd8e3e72a886b419b82978736d57e1c9a6c2d4345c11b549",
+      "bytes": 565
+    },
+    "batches/b_r1001_c1001/preview_combined.png": {
+      "sha256": "8d12196929ed505535821c6f89a7bdc9a1a6070637b4687c3f916ecc76fffcad",
+      "bytes": 2902047
+    },
+    "batches/b_r1001_c1001/published.json": {
+      "sha256": "adbb8ed70aad07d13c385306f40bcc7f746e2a9c6e40464e9d261ad575491a94",
+      "bytes": 189
+    },
+    "batches/b_r1001_c1001/verification.json": {
+      "sha256": "7ad7498f8ff1817fd93ced435d27120680e6c6e0714c50f4c70f176883c03666",
+      "bytes": 1874
+    }
+  },
+  "note": "GeoPackage is authoritative for the remaining queue; GeoJSON is a WGS84 interchange export only. Uncertainty retained."
+}

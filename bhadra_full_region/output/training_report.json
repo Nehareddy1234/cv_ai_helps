@@ -1,0 +1,67 @@
+{
+  "source_classification_sha256": "7c136abb790001afb0c0a5e39469cffa28eee2447bae2ed1cfba3c246a84e1a2",
+  "image_sha256": "fae96798f183e052ab726651f0b94c3cd02bb12f3a8b3e9bec394a33742d4265",
+  "source_window": [
+    1058,
+    790,
+    71,
+    40
+  ],
+  "purity_minimum": 0.75,
+  "counts": {
+    "Water": 193,
+    "Trees / dense woody vegetation": 458,
+    "Crops / grass / low vegetation": 429,
+    "Bare soil / rock / sparse ground": 509
+  },
+  "features": "RGB, HSV, Lab, excess green and visible ratios",
+  "classification_classes": {
+    "1": "Water",
+    "2": "Trees / dense woody vegetation",
+    "3": "Crops / grass / low vegetation",
+    "4": "Bare soil / rock / sparse ground",
+    "8": "Uncertain / mixed"
+  },
+  "spatial_label_agreement": {
+    "description": "Spatial-block agreement with transferred scene labels, NOT independent field accuracy",
+    "held_samples": 326,
+    "classes": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confusion_matrix": [
+      [
+        31,
+        9,
+        1,
+        0
+      ],
+      [
+        3,
+        102,
+        28,
+        4
+      ],
+      [
+        0,
+        25,
+        32,
+        3
+      ],
+      [
+        1,
+        7,
+        3,
+        77
+      ]
+    ]
+  },
+  "limitations": [
+    "Training labels come from one small scene and are not surveyed ground truth",
+    "Performance over the rest of Bhadra is unvalidated; every automatic label needs review",
+    "No reliable individual buildings, industrial structures or roads at this image resolution",
+    "No NIR, elevation or road-distance features are used"
+  ]
+}

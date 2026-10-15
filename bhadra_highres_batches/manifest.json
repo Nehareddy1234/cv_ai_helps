@@ -1,0 +1,89 @@
+{
+  "version": 2,
+  "path_base": "repository_root",
+  "created_utc": "2026-10-15T12:38:31.286651+00:00",
+  "crs": "EPSG:32643",
+  "pixel_size": [
+    0.484992610681435,
+    0.48499272632797674
+  ],
+  "batch_image_size": [
+    2660,
+    1446
+  ],
+  "halo_pixels": 128,
+  "core_pixels": [
+    2404,
+    1190
+  ],
+  "batch_count": 1860,
+  "aoi_area_km2": 1107.3286571929466,
+  "seed_area_km2": 0.9008732225089829,
+  "zoom": 19,
+  "source": "Esri World Imagery XYZ",
+  "sam_params": {
+    "points_per_side": 24,
+    "points_per_batch": 16,
+    "pred_iou_thresh": 0.82,
+    "stability_score_thresh": 0.9,
+    "crop_n_layers": 0,
+    "min_mask_region_area": 40
+  },
+  "sam_tiles": [
+    [
+      0,
+      0,
+      1024,
+      768
+    ],
+    [
+      818,
+      0,
+      1024,
+      768
+    ],
+    [
+      1636,
+      0,
+      1024,
+      768
+    ],
+    [
+      0,
+      678,
+      1024,
+      768
+    ],
+    [
+      818,
+      678,
+      1024,
+      768
+    ],
+    [
+      1636,
+      678,
+      1024,
+      768
+    ]
+  ],
+  "checkpoint": "weights/sam_vit_h_4b8939.pth",
+  "checkpoint_sha256": "a7bf3b02f3ebf1267aba913ff637d9a2d5c33d3173bb679e46d9f338c26f262e",
+  "references": {
+    "bhadra_full_region/data/bhadra_boundary.geojson": "6b6094b2d67ad78bba0a01a4c86cdb534df92bdcb7e98a94a2dc1eaeb84af62c",
+    "samgeo_esri_test/output/full_classification/classified_regions.gpkg": "114028adbe7992a06be9d16810ee49d4e7c383b19359850b196a19f9c1cdcf83",
+    "samgeo_esri_test/data/esri_test_aligned.tif": "7898fc3bb5950de06d5a6358066bca9305a5d3986ce437cdcc2e3b569c49929c",
+    "samgeo_esri_test/output/full_classification/scene_random_forest.joblib": "6b20051872b1722fd09ff30b4ac9000eeffab3d61269cc3ffcebcb6a4b5239f8",
+    "samgeo_esri_test/output/reviewed_with_industrial.gpkg": "c1762e9c92b4694258e1e912ecd97c49fa397cb515e5bca0509111ebd46fa142",
+    "samgeo_esri_test/output/full_classification/context.gpkg": "50b0683ccf3256b18af05a49004dbcd273fefb40a653414e8062f265038f8cb1",
+    "samgeo_esri_test/segment_full_rectangle.py": "620773b3f767c6a6dc81e7d9b1de3be1642fec4efe199be613991b1169462980",
+    "samgeo_esri_test/compose_full_rectangle.py": "a19f0fb02e7ca224ab20c8f5941526515f0b671ea956a93f888b01a3ad6c430f",
+    "samgeo_esri_test/classify_full_rectangle.py": "4f49661a49952e98ec7e178cfc7a7a1ffa387e7253e2ba69ab223e7a8acf1a95"
+  },
+  "min_free_gb": 8,
+  "first_batch_review_required": true,
+  "classification": "Original 16-feature scene random forest and region rules; no copied scene-specific IDs",
+  "all_batches_planned": true,
+  "grid_gap_m2": 3.748133186034551e-05,
+  "cpu_estimate_days_at_5_minutes_per_sam_pass": 45.208333333333336
+}

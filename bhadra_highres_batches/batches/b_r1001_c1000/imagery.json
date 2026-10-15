@@ -1,0 +1,14 @@
+{
+  "sha256": "faa999e4047e2bfca4532157988d6033b85506f31aaaa7e65564b52578ad5e11",
+  "retrieved_utc": "2026-10-15T12:52:32.419568+00:00",
+  "service": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+  "zoom": 18,
+  "native_mercator_pixel_m": 0.5971642834779395,
+  "target_utm_pixel_m": [
+    0.484992610681435,
+    0.48499272632797674
+  ],
+  "xyz_tiles": 60,
+  "missing_tile_checked": true,
+  "warning": "Sampling does not establish effective ground resolution or imagery date; actual available native zoom is recorded"
+}
