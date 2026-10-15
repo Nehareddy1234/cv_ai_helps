@@ -1,9 +1,44 @@
-# Saved Esri/SamGeo test checkpoint
+# Current Esri/SamGeo test snapshot
 
-This folder records the reviewed test from `HELPS/latest try` before adding the industrial structures requested on 2026-10-15. It includes scripts, input imagery, SAM masks, reviewed vectors, reports and QGIS projects. Large model weights and Python caches are deliberately excluded. This is the requested checkpoint in `Nehareddy1234/cv_ai_helps` on `master`. GeoTIFFs here contain the actual raster data, not Git LFS pointer files.
+Updated on 2026-10-15 from `HELPS/latest try`. This folder includes the reviewed
+classification, industrial additions, and full saved test rectangle partitioned
+into **2,634 unlabeled regions**. Scripts, input imagery, cached SAM tile masks,
+vectors, rasters, styles, previews, verification reports and QGIS projects are
+included. Model weights, Python caches and provisional previews are excluded.
+The destination is `Nehareddy1234/cv_ai_helps`, branch `master`. GeoTIFFs contain
+actual raster data, not Git LFS pointer files.
 
-The first copy was mistakenly pushed to a different HELPS repository as `d97db48`. This copy corrects the destination without rewriting or deleting the other repository's history.
+The pre-industrial baseline remains available in commit `fff3e34`. The mistaken
+copy in `ManimeghanathA/HELPS` (`Neha_branch`, `d97db48`) was reverted by `f28d926`
+at the user's request; no history was rewritten.
 
-The working folder remains `HELPS/latest try`; this is its Git checkpoint. The original QGIS projects and scripts reference sibling `samgeo` and `Codes` datasets and the local SAM checkpoint. They are an audit snapshot, not a standalone installation. The reviewed GeoPackage itself is portable: open `output/reviewed_test_classes.gpkg`, layer `reviewed_classes`, and apply `output/reviewed_test_classes.qml`. Its `buildings_reference` layer contains the accepted buildings clipped to the test footprint. Open `data/esri_test_aligned.tif` underneath to inspect the same Esri image without external project paths.
+The working folder remains `HELPS/latest try`; this is its Git snapshot. Scripts
+retain their working-layout paths to sibling `samgeo` and `Codes` datasets and
+the local SAM checkpoint. Original QGIS project snapshots also retain external
+layer references. They are audit snapshots, not standalone installations.
+For reproduction with unchanged scripts, use the original sibling-folder layout
+described in the method READMEs. Cached full-rectangle masks are included so the
+composition step does not require running the model again.
 
-See `README_REVIEWED_TEST.md` for methods and limitations. This is a partially classified, visually reviewed test, not field-validated land-cover mapping or the complete Bhadra AOI.
+## Inspect the current result independently of external project paths
+
+In QGIS, load `data/esri_test_aligned.tif`, then
+`output/full_rectangle/unlabelled_regions.gpkg`, layer `regions`, and apply
+`output/full_rectangle/unlabelled_regions.qml`. These files are self-contained.
+The saved `Bhadra_Esri_Unlabelled_Segments.qgz` records the working live-Esri view.
+
+The partition covers the entire inner test rectangle with no overlaps and no
+semantic classes. SAM ViT-H proposals and accepted footprints are combined;
+approximately 26% of pixels initially require image-edge gap completion, followed
+by small-fragment cleanup. The `origin` field identifies provenance. This is
+SAM-based post-processed segmentation, not entirely raw SAM output or proof of
+perfect physical-object boundaries.
+
+For industrial additions, use `output/reviewed_with_industrial.gpkg` and
+`README_INDUSTRIAL.md`. The original reviewed result remains at
+`output/reviewed_test_classes.gpkg` with its corresponding QML style.
+
+See `README_FULL_RECTANGLE.md`, `README_INDUSTRIAL.md`, and
+`README_REVIEWED_TEST.md` for methods and limitations. Verification results are
+in `output/full_rectangle/verification.json` and `coverage_report.json`. This is
+the saved small test rectangle, not the full Bhadra AOI or field-validated mapping.

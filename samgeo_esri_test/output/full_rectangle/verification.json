@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "region_count": 2634,
+  "vector_raster_identical": true,
+  "complete_inner_rectangle": true,
+  "no_semantic_class_fields": true,
+  "source_image_unchanged": true,
+  "accepted_buildings_source_unchanged": true,
+  "preserved_footprint_pixels_unchanged": true,
+  "overlap_m2": 9.313225746154785e-10,
+  "extent_mismatch_m2": 0.0,
+  "maximum_region_area_error_m2": 1.6727426555007696e-08
+}

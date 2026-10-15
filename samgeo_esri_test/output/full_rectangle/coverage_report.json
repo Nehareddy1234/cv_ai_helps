@@ -1,0 +1,50 @@
+{
+  "provisional": false,
+  "completed_tiles": 6,
+  "region_count": 2634,
+  "regions_by_origin": {
+    "SAM automatic": 1178,
+    "Edge-based gap completion": 1174,
+    "Preserved footprint": 282
+  },
+  "area_by_origin_m2": {
+    "Edge-based gap completion": 229105.51645262016,
+    "Preserved footprint": 24201.803766003093,
+    "SAM automatic": 647565.9022903605
+  },
+  "coverage_percent": 100.0,
+  "valid_image_pixels": 3829952,
+  "sam_pixels_before_footprints": 2808484,
+  "gap_completion_pixel_percent": 25.966382868505924,
+  "tile_proposals": 1225,
+  "retained_sam_proposals_before_footprints": 1016,
+  "proposal_rejections": {
+    "internal_tile_edge": 171,
+    "tile_filling_mask": 0,
+    "tiny": 0,
+    "near_duplicate": 111
+  },
+  "invalid_geometries": 0,
+  "sliver_cleanup": {
+    "merged_fragments": 8937,
+    "reassigned_pixels": 36101,
+    "minimum_pixels": 40
+  },
+  "overlap_m2": 9.313225746154785e-10,
+  "uncovered_m2": 0.0,
+  "outside_rectangle_m2": 0.0,
+  "rectangle_bounds": [
+    568752.4819662407,
+    1514626.3977343172,
+    570040.6223402105,
+    1515325.7572456822
+  ],
+  "crs": "EPSG:32643",
+  "limitations": [
+    "100% geometric coverage does not mean every physical object is correctly delineated",
+    "Edge-based gap completion is not a direct SAM prediction",
+    "No land-cover classes have been assigned",
+    "Small non-footprint fragments are merged by longest shared boundary; SAM boundaries are post-processed",
+    "Two-pixel layout-frame border excluded; image sampling approximately 0.485 m"
+  ]
+}

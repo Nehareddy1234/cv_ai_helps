@@ -1,0 +1,35 @@
+{
+  "added_features": 9,
+  "accepted_candidates": [
+    "tank_west",
+    "tank_south",
+    "tank_east",
+    "roof_northwest",
+    "roof_north",
+    "roof_central",
+    "roof_small",
+    "process_rectangular",
+    "process_pad"
+  ],
+  "rejected_candidates": {
+    "roof_northeast": "SAM included the adjacent tree/shadow; not a reliable roof boundary"
+  },
+  "skipped_duplicates": [],
+  "subtypes": {
+    "Roofed building": 4,
+    "Circular tank / treatment unit": 3,
+    "Rectangular process structure": 2
+  },
+  "invalid_geometries": 0,
+  "new_structure_overlap_m2": -1.8189894035458565e-12,
+  "existing_building_overlap_m2": 0.0,
+  "landcover_structure_overlap_m2": 0.0,
+  "landcover_area_removed_m2": 1.1641532182693481e-10,
+  "original_buildings_sha256": "f21b83287cdb91881d8e6142029d7ae40c9cddcc52d64819cf86f26a77d868a2",
+  "original_buildings_unchanged": true,
+  "limitations": [
+    "Industrial subtype is based on image appearance, not field verification",
+    "No extra water basins or tree-filled beds are asserted to be roofed buildings",
+    "Only the pictured industrial crop is updated"
+  ]
+}

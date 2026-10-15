@@ -1,0 +1,49 @@
+{
+  "image_sha256": "7898fc3bb5950de06d5a6358066bca9305a5d3986ce437cdcc2e3b569c49929c",
+  "parameters": {
+    "points_per_side": 24,
+    "points_per_batch": 16,
+    "pred_iou_thresh": 0.82,
+    "stability_score_thresh": 0.9,
+    "crop_n_layers": 0,
+    "min_mask_region_area": 40
+  },
+  "tiles": [
+    [
+      0,
+      0,
+      1024,
+      768
+    ],
+    [
+      818,
+      0,
+      1024,
+      768
+    ],
+    [
+      1636,
+      0,
+      1024,
+      768
+    ],
+    [
+      0,
+      678,
+      1024,
+      768
+    ],
+    [
+      818,
+      678,
+      1024,
+      768
+    ],
+    [
+      1636,
+      678,
+      1024,
+      768
+    ]
+  ]
+}
