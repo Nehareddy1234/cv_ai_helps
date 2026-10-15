@@ -1,0 +1,57 @@
+{
+  "geometry_checks_passed": true,
+  "sample_checks": {
+    "reservoir": {
+      "expected_water": true,
+      "actual_water": true,
+      "passed": true
+    },
+    "lower_river": {
+      "expected_water": true,
+      "actual_water": true,
+      "passed": true
+    },
+    "middle_river": {
+      "expected_water": true,
+      "actual_water": true,
+      "passed": true
+    },
+    "upper_river": {
+      "expected_water": true,
+      "actual_water": true,
+      "passed": true
+    },
+    "upper_island": {
+      "expected_water": false,
+      "actual_water": false,
+      "passed": true
+    },
+    "middle_island": {
+      "expected_water": false,
+      "actual_water": false,
+      "passed": true
+    },
+    "exposed_bar": {
+      "expected_water": false,
+      "actual_water": false,
+      "passed": true
+    },
+    "dry_field": {
+      "expected_water": false,
+      "actual_water": false,
+      "passed": true
+    }
+  },
+  "all_samples_passed": true,
+  "note": "Handpicked visual regression points only; not a statistical accuracy assessment",
+  "land_sample_checks": {
+    "central_soil": {
+      "expected_class": 4,
+      "passed": true
+    },
+    "lower_left_canopy": {
+      "expected_class": 2,
+      "passed": true
+    }
+  }
+}
