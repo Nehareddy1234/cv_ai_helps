@@ -1,0 +1,202 @@
+{
+  "region_count": 2634,
+  "counts_by_class": {
+    "Uncertain / mixed": 1405,
+    "Bare soil / rock / sparse ground": 335,
+    "Trees / dense woody vegetation": 306,
+    "Buildings / roofs": 301,
+    "Water": 138,
+    "Crops / grass / low vegetation": 123,
+    "Industrial / engineered structures": 17,
+    "Roads / tracks / paved surfaces": 9
+  },
+  "area_m2_by_class": {
+    "Bare soil / rock / sparse ground": 232445.8456872558,
+    "Buildings / roofs": 20336.468204223722,
+    "Crops / grass / low vegetation": 165341.71036562766,
+    "Industrial / engineered structures": 14337.000740056816,
+    "Roads / tracks / paved surfaces": 17229.00467920252,
+    "Trees / dense woody vegetation": 201208.91009407287,
+    "Uncertain / mixed": 155889.94995188926,
+    "Water": 94084.33278665524
+  },
+  "uncertain_area_percent": 17.304316085422847,
+  "original_segmentation_sha256": "51c70bd5096a7e1397f42a158b7666c969a9b0a536e6421e74b88afd78371bd6",
+  "original_segmentation_unchanged": true,
+  "geometry_unchanged": true,
+  "feature_names": [
+    "red",
+    "green",
+    "blue",
+    "hue",
+    "saturation",
+    "value",
+    "lab_L",
+    "lab_a",
+    "lab_b",
+    "excess_green",
+    "green_red_ratio",
+    "blue_green_ratio",
+    "texture_3",
+    "texture_9",
+    "texture_21",
+    "road_distance"
+  ],
+  "feature_importances": {
+    "red": 0.06915751768643981,
+    "green": 0.01680718952612192,
+    "blue": 0.0222206480030613,
+    "hue": 0.09756697567011308,
+    "saturation": 0.03330745237810132,
+    "value": 0.01989948549150082,
+    "lab_L": 0.03631174411351698,
+    "lab_a": 0.0782481457848889,
+    "lab_b": 0.07548366132620368,
+    "excess_green": 0.03824104392878171,
+    "green_red_ratio": 0.05039775072727956,
+    "blue_green_ratio": 0.05913298476380346,
+    "texture_3": 0.026015552451251263,
+    "texture_9": 0.06129477501118602,
+    "texture_21": 0.09705967606085471,
+    "road_distance": 0.2188553970768956
+  },
+  "training_samples_by_class": {
+    "Water": 8000,
+    "Trees / dense woody vegetation": 8000,
+    "Crops / grass / low vegetation": 8000,
+    "Bare soil / rock / sparse ground": 8000,
+    "Buildings / roofs": 8000,
+    "Roads / tracks / paved surfaces": 8000
+  },
+  "class_names": {
+    "1": "Water",
+    "2": "Trees / dense woody vegetation",
+    "3": "Crops / grass / low vegetation",
+    "4": "Bare soil / rock / sparse ground",
+    "5": "Buildings / roofs",
+    "6": "Industrial / engineered structures",
+    "7": "Roads / tracks / paved surfaces",
+    "8": "Uncertain / mixed"
+  },
+  "explicit_visual_object_review": {
+    "1": {
+      "ids": [
+        2066,
+        2168,
+        2190,
+        2222,
+        2263,
+        2277,
+        2370,
+        2389,
+        2484,
+        2497,
+        2578,
+        1835
+      ],
+      "reason": "Flat green treatment-basin water/algal surface, or white water at spillway (1835)"
+    },
+    "2": {
+      "ids": [
+        634,
+        1001,
+        2350,
+        1746,
+        1812,
+        1873,
+        1548,
+        1819,
+        1707,
+        1881,
+        1943,
+        1981,
+        2004
+      ],
+      "reason": "Visible woody canopy patch in numbered source-image audit"
+    },
+    "3": {
+      "ids": [
+        157,
+        1818
+      ],
+      "reason": "Visible low vegetation / managed planted patch"
+    },
+    "4": {
+      "ids": [
+        562,
+        1174,
+        1180,
+        1196,
+        1249,
+        1338,
+        1470,
+        1482,
+        1714,
+        1630,
+        1455,
+        2275,
+        2363,
+        2468,
+        2561,
+        2567,
+        2471,
+        2374
+      ],
+      "reason": "Exposed riverbank/bar, rock, or dry sparse treatment-bed surface; not roof"
+    },
+    "6": {
+      "ids": [
+        1536,
+        1610,
+        1677,
+        1708,
+        1754,
+        1798,
+        1932,
+        1920,
+        1953,
+        2129,
+        2212,
+        2197
+      ],
+      "reason": "Visible dam/spillway civil structure; not a roofed building"
+    },
+    "7": {
+      "ids": [
+        20,
+        179,
+        260,
+        186,
+        427,
+        569,
+        1103,
+        1876,
+        2047
+      ],
+      "reason": "Visible paved road, bridge deck or connected facility access pavement"
+    }
+  },
+  "additional_examples": {
+    "1": [
+      [
+        1330,
+        1225,
+        6
+      ]
+    ],
+    "2": [],
+    "3": [],
+    "4": [],
+    "5": [],
+    "7": []
+  },
+  "limitations": [
+    "No independent ground truth; scores are evidence/forest agreement, not calibrated probabilities",
+    "Tree canopy versus low vegetation/plantation is ambiguous in RGB imagery",
+    "Bare ground includes exposed rock and sparse dry cover",
+    "Road context comes from visually reviewed region footprints, not surveyed road boundaries",
+    "Some SAM regions mix surfaces; uncertain regions retain a suggested class for review",
+    "Engineered structures include accepted tanks/process units and visually identified dam/spillway structures",
+    "Original SAM and edge-completed region boundaries are retained unchanged"
+  ]
+}

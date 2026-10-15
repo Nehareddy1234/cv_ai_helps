@@ -1,0 +1,68 @@
+{
+  "integrity_passed": true,
+  "region_count": 2634,
+  "geometries_unchanged": true,
+  "vector_raster_identical": true,
+  "complete_rectangle_coverage": true,
+  "accepted_footprint_classes_preserved": true,
+  "shoreline_regression_points": {
+    "reservoir": {
+      "segment_id": 1793,
+      "class_id": 1,
+      "expected_water": true,
+      "passed": true
+    },
+    "lower_river": {
+      "segment_id": 1335,
+      "class_id": 1,
+      "expected_water": true,
+      "passed": true
+    },
+    "middle_river": {
+      "segment_id": 963,
+      "class_id": 1,
+      "expected_water": true,
+      "passed": true
+    },
+    "upper_river": {
+      "segment_id": 519,
+      "class_id": 1,
+      "expected_water": true,
+      "passed": true
+    },
+    "upper_island": {
+      "segment_id": 412,
+      "class_id": 4,
+      "expected_water": false,
+      "passed": true
+    },
+    "middle_island": {
+      "segment_id": 810,
+      "class_id": 4,
+      "expected_water": false,
+      "passed": true
+    },
+    "exposed_bar": {
+      "segment_id": 1338,
+      "class_id": 4,
+      "expected_water": false,
+      "passed": true
+    },
+    "dry_field": {
+      "segment_id": 12,
+      "class_id": 4,
+      "expected_water": false,
+      "passed": true
+    }
+  },
+  "all_shoreline_points_passed": true,
+  "note": "Geometry and handpicked point checks do not establish real-world classification accuracy",
+  "reviewed_object_export_checks": {
+    "427": true,
+    "1103": true,
+    "1338": true,
+    "1610": true,
+    "2066": true,
+    "2190": true
+  }
+}

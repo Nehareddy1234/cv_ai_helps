@@ -1,0 +1,94 @@
+# Full-rectangle image-based classification
+
+This is a separate classification of the 2,634 existing regions in the saved
+Esri test rectangle. It does not replace their geometry or expand to the full
+Bhadra area. It is provisional RGB image interpretation, not field-validated
+mapping. The original unlabeled GeoPackage and project remain unchanged.
+
+## Categories
+
+1. Water
+2. Trees / dense woody vegetation
+3. Crops / grass / low vegetation (including visually interpreted plantations)
+4. Bare soil / rock / sparse ground
+5. Buildings / roofs
+6. Industrial / engineered structures (tanks, process units, dam/spillway structures)
+7. Roads / tracks / paved surfaces
+8. Uncertain / mixed
+
+## Method
+
+`classify_full_rectangle.py` trains a scene-specific random forest from eroded
+interiors of previously reviewed regions and accepted buildings, plus explicitly
+reviewed numbered objects, including road surfaces and green treatment basins.
+Features include RGB, HSV, Lab, visible excess green, colour ratios, multiscale
+texture, and proximity to supported road corridors. No NIR index or elevation
+measurement is claimed from this RGB image.
+
+Pixel-level forest votes are aggregated within each existing region. Accepted
+building and industrial footprints take priority. Substantial overlap with the
+previously reviewed classes supplies a second source of evidence. Weak or mixed
+votes and contradictory evidence produce an uncertain label, with a suggested
+class and reason retained for review. Roofed buildings are distinguished from
+the three circular tanks and two accepted rectangular process structures. Visible
+dam and spillway structures are assigned to the engineered-structures category,
+not incorrectly counted as roofed buildings.
+
+The local OSM roads were visually inspected; some western paths do not match
+visible roads. They are retained only as context, not used as ground truth.
+An initial approximate centerline trial had alignment problems. The final model
+uses the actual pixels of visually reviewed road regions; these are recorded in
+`VISUAL_REVIEW` and the `reviewed_road_regions` layer in `context.gpkg`. Any
+`supported_road_centerlines` layer is an obsolete diagnostic from that first
+trial, not used by the final classification. Road context does not create or
+change region boundaries.
+
+Explicit per-object interpretations are recorded in `VISUAL_REVIEW`, bound to the
+input GeoPackage SHA-256 so IDs cannot silently be applied to a different run.
+They address visible road/roof confusion, dam structures, exposed river bars,
+and flat green water/algal surfaces in treatment basins. These are analyst
+interpretations, not new model discoveries or surveyed ground truth. Their
+`evidence_score` is blank rather than an invented numeric confidence.
+
+`spatial_label_agreement.json` is agreement with scene-interpreted labels held
+out in fixed spatial blocks. It is NOT independent ground-truth accuracy.
+`model_score`, `vote_fraction`, and `evidence_score` are uncalibrated agreement
+or overlap measurements, not probabilities that a category is correct.
+Do not confuse them with the inherited SAM segmentation score.
+
+## Reproduce and view
+
+Run in the original `latest try` working layout with the installed Python
+environment (rasterio, geopandas, scipy, scikit-image, scikit-learn, joblib,
+matplotlib):
+
+```powershell
+python inspect_classification_context.py
+python classify_full_rectangle.py
+python verify_full_classification.py
+```
+
+Main outputs are in `output/full_classification`:
+
+- `classified_regions.gpkg`: all regions, a `needs_review` subset, and extent.
+- `classified_regions.qml`: categorical style with transparent fills.
+- `classified_regions.tif`: category codes, zero outside the rectangle.
+- `region_classification.csv`: attributes and review reasons.
+- `classification_report.json`, `verification.json`: method and checks.
+- `scene_random_forest.joblib`, `training_samples.npz`: local model and samples.
+- `classification_overview.png` and detail previews: visual review.
+
+Use the `classified_regions` layer in QGIS above the saved Esri raster or live
+Esri imagery. The `needs_review` layer is a subset, not additional independent
+regions; do not count both layers together. The separate QGIS project is
+`Bhadra_Esri_Full_Classification.qgz` after verification.
+
+## Limits
+
+Shadows can resemble water; dry crops can resemble bare soil; woody plantations
+can resemble forest. Some existing regions mix multiple physical surfaces,
+and those boundaries are deliberately not changed by this classification step.
+Road widths and surface materials are not surveyed. Small roofs outside the
+accepted footprints may be missed or marked uncertain. Complete spatial
+coverage means each region has a category, including uncertain; it does not mean
+every physical object has been recognized correctly.

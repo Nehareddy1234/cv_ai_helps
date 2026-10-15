@@ -2,9 +2,11 @@
 
 Updated on 2026-10-15 from `HELPS/latest try`. This folder includes the reviewed
 classification, industrial additions, and full saved test rectangle partitioned
-into **2,634 unlabeled regions**. Scripts, input imagery, cached SAM tile masks,
+into **2,634 regions**, with separate unlabeled and classified outputs. Scripts, input imagery, cached SAM tile masks,
 vectors, rasters, styles, previews, verification reports and QGIS projects are
-included. Model weights, Python caches and provisional previews are excluded.
+included. The small scene-specific random-forest model and training samples are
+included; large SAM checkpoint weights, Python caches and intermediate
+full-rectangle segmentation previews are excluded.
 The destination is `Nehareddy1234/cv_ai_helps`, branch `master`. GeoTIFFs contain
 actual raster data, not Git LFS pointer files.
 
@@ -22,13 +24,29 @@ composition step does not require running the model again.
 
 ## Inspect the current result independently of external project paths
 
+For the latest classification, load `data/esri_test_aligned.tif`, then
+`output/full_classification/classified_regions.gpkg`, layer `classified_regions`,
+and apply `output/full_classification/classified_regions.qml`. The saved working
+project is `Bhadra_Esri_Full_Classification.qgz`.
+
+The classification combines scene-trained random-forest colour/texture evidence,
+reviewed overlap, accepted footprints, and explicit visual review. **1,229 regions
+have specific categories; 1,405 remain uncertain/mixed (17.3% of total area).**
+The original region geometries are unchanged. Categories include water, trees,
+crops/low vegetation, bare ground/rock, roofs, engineered structures, roads, and
+uncertain. This is provisional image interpretation, not field-validated mapping.
+See `README_FULL_CLASSIFICATION.md` and the reports in `output/full_classification`.
+The `needs_review` layer is a subset of the main layer, not additional regions.
+
+For the previous unlabeled segmentation:
+
 In QGIS, load `data/esri_test_aligned.tif`, then
 `output/full_rectangle/unlabelled_regions.gpkg`, layer `regions`, and apply
 `output/full_rectangle/unlabelled_regions.qml`. These files are self-contained.
 The saved `Bhadra_Esri_Unlabelled_Segments.qgz` records the working live-Esri view.
 
-The partition covers the entire inner test rectangle with no overlaps and no
-semantic classes. SAM ViT-H proposals and accepted footprints are combined;
+The unlabeled partition covers the entire inner test rectangle with no overlaps
+and no semantic classes. SAM ViT-H proposals and accepted footprints are combined;
 approximately 26% of pixels initially require image-edge gap completion, followed
 by small-fragment cleanup. The `origin` field identifies provenance. This is
 SAM-based post-processed segmentation, not entirely raw SAM output or proof of
