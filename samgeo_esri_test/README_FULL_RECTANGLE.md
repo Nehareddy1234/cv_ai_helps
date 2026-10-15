@@ -8,6 +8,10 @@ fields. No land-cover classes are assigned.
 
 Run from this directory with the existing Python environment:
 
+The six cached tile masks are included. Fresh inference requires the local
+checkpoint `../weights/sam_vit_h_4b8939.pth` or the `SAM_CHECKPOINT` environment
+variable. Verification uses the included `data/accepted_buildings_reference.gpkg`.
+
 ```powershell
 python -u segment_full_rectangle.py
 python -u compose_full_rectangle.py

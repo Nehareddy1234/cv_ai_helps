@@ -45,7 +45,7 @@ def main():
         for row in regions.itertuples())
     assert max_area_error<.01
     old=json.loads((ROOT/'output/industrial_review.json').read_text())
-    current=hashlib.sha256((ROOT.parent/'samgeo/output/bhadra_classified_buildings.gpkg').read_bytes()).hexdigest()
+    current=hashlib.sha256((ROOT/'data/accepted_buildings_reference.gpkg').read_bytes()).hexdigest()
     assert current==old['original_buildings_sha256'], 'Accepted building source changed'
     report={'passed':True,'region_count':len(regions),'vector_raster_identical':True,
         'complete_inner_rectangle':True,'no_semantic_class_fields':True,

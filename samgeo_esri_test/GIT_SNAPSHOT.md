@@ -32,17 +32,19 @@ reviewed objects. This is not field-validated mapping or entirely raw SAM output
 ## Cleanup scope and recovery
 
 55 superseded project snapshots, early experiment scripts/data, and generated
-previews were removed from the tracked snapshot. They remain on the local disk
-and in commit `903b93f`; `.gitignore` lists their exact paths. No repository-wide
-plugin files or unrelated Bhadra work were removed. No history was rewritten.
+previews were removed from the tracked snapshot in the first cleanup.
+The subsequent repository-wide cleanup also removed legacy plugin/Bhadra code
+and local obsolete files. All removed local material, including uncommitted work,
+was verified in `HELPS/cleanup-backups/cv_ai_helps-legacy-20261015.zip` before
+removal. Earlier tracked versions remain in Git history; no history was rewritten.
 Earlier method stages can be inspected at `903b93f`, including industrial and
 reviewed-test methods; current documentation describes the retained stages.
 
 The cached composition and classification stages can run from this folder.
-Fresh SAM inference still requires the checkpoint at the path configured in
-`segment_full_rectangle.py`. `verify_full_rectangle.py` additionally checks the
-original accepted-building dataset in the original sibling-folder layout; this
-external provenance check is not required to open or verify the current snapshot.
+Fresh SAM inference uses `../weights/sam_vit_h_4b8939.pth`, or `SAM_CHECKPOINT`.
+`verify_full_rectangle.py` now checks the original accepted-building dataset
+preserved at `data/accepted_buildings_reference.gpkg`; its hash matches the
+original review record. No old root-level datasets are needed by these scripts.
 Use `verify_full_classification.py` to check the included classified source and
 `verify_current_snapshot.py` to check the portable current result/project.
 

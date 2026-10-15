@@ -58,7 +58,7 @@ Do not confuse them with the inherited SAM segmentation score.
 
 ## Reproduce and view
 
-Run in the original `latest try` working layout with the installed Python
+Run in this folder with the installed Python
 environment (rasterio, geopandas, scipy, scikit-image, scikit-learn, joblib,
 matplotlib):
 

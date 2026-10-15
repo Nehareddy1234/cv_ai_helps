@@ -1,4 +1,5 @@
-# Superseded experiments and reproducible previews: retained locally, not in Git.
+# Superseded experiments and reproducible previews: removed from the active folder.
+# Local recovery archive is outside this repository under HELPS/cleanup-backups.
 # Recover tracked historical versions from commit 903b93f.
 /Bhadra_Esri_Full_Classification.qgz
 /Bhadra_Esri_Industrial_Test.qgz

@@ -8,6 +8,7 @@ from pathlib import Path
 import hashlib
 import json
 import time
+import os
 import numpy as np
 import rasterio
 
@@ -36,7 +37,10 @@ def main():
     import torch
     from samgeo import SamGeo
     torch.set_num_threads(4)
-    sam=SamGeo(model_type='vit_h',checkpoint=str(ROOT.parent/'samgeo/weights/sam_vit_h_4b8939.pth'),
+    checkpoint=Path(os.environ.get('SAM_CHECKPOINT', str(ROOT.parent/'weights/sam_vit_h_4b8939.pth')))
+    if not checkpoint.is_file():
+        raise FileNotFoundError(f'Set SAM_CHECKPOINT or supply the ViT-H checkpoint at {checkpoint}')
+    sam=SamGeo(model_type='vit_h',checkpoint=str(checkpoint),
         automatic=True,device='cpu',sam_kwargs=PARAMS)
     for i in todo:
         x,y,w,h=TILES[i]; t=time.time()

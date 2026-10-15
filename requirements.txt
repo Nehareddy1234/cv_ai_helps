@@ -1,0 +1,12 @@
+# Versions used by the verified local Python 3.11 workflow.
+numpy==1.26.4
+pandas==2.3.3
+geopandas==1.1.4
+rasterio==1.4.4
+scipy==1.17.1
+scikit-image==0.26.0
+scikit-learn==1.8.0
+joblib==1.5.3
+matplotlib==3.10.8
+segment-geospatial==1.4.2
+torch==2.13.0
