@@ -1,62 +1,51 @@
-# Current Esri/SamGeo test snapshot
+# Current Esri / SAM ViT-H result
 
-Updated on 2026-10-15 from `HELPS/latest try`. This folder includes the reviewed
-classification, industrial additions, and full saved test rectangle partitioned
-into **2,634 regions**, with separate unlabeled and classified outputs. Scripts, input imagery, cached SAM tile masks,
-vectors, rasters, styles, previews, verification reports and QGIS projects are
-included. The small scene-specific random-forest model and training samples are
-included; large SAM checkpoint weights, Python caches and intermediate
-full-rectangle segmentation previews are excluded.
-The destination is `Nehareddy1234/cv_ai_helps`, branch `master`. GeoTIFFs contain
-actual raster data, not Git LFS pointer files.
+Updated 2026-10-15 for `Nehareddy1234/cv_ai_helps`, branch `master`.
+Open **Bhadra_Esri_SAM_ViT_H_Current.qgz**. It contains exactly two layers:
+the current combined result and live Esri World Imagery. The GeoPackage path
+is relative to this folder; Esri tiles require an internet connection.
 
-The pre-industrial baseline remains available in commit `fff3e34`. The mistaken
-copy in `ManimeghanathA/HELPS` (`Neha_branch`, `d97db48`) was reverted by `f28d926`
-at the user's request; no history was rewritten.
+## Current result
 
-The working folder remains `HELPS/latest try`; this is its Git snapshot. Scripts
-retain their working-layout paths to sibling `samgeo` and `Codes` datasets and
-the local SAM checkpoint. Original QGIS project snapshots also retain external
-layer references. They are audit snapshots, not standalone installations.
-For reproduction with unchanged scripts, use the original sibling-folder layout
-described in the method READMEs. Cached full-rectangle masks are included so the
-composition step does not require running the model again.
+`output/combined_classes_with_uncertain` contains the GeoPackage, raster,
+QML style and verification report. Water, trees/dense woody vegetation,
+buildings/roofs, industrial/engineered structures, roads and uncertain regions
+share one cyan category (2,176 original regions). Crops/grass and bare ground
+remain separate categories in the same layer. The result has three dissolved
+multipart category features; `reclassified_regions` retains all 2,634 original
+segments and their source labels. Including uncertain regions does not validate
+their interpretation. No gaps were filled and no outer hull was added by merging.
 
-## Inspect the current result independently of external project paths
+```powershell
+python combine_selected_classes.py --include-uncertain
+python verify_current_snapshot.py
+```
 
-For the latest classification, load `data/esri_test_aligned.tif`, then
-`output/full_classification/classified_regions.gpkg`, layer `classified_regions`,
-and apply `output/full_classification/classified_regions.qml`. The saved working
-project is `Bhadra_Esri_Full_Classification.qgz`.
+The original classified data remain in `output/full_classification` to reproduce
+the merge. The aligned image, original partition, reviewed footprint GeoPackage,
+SAM tile caches, model/training evidence and relevant verification reports remain
+as inputs and provenance. The full rectangle is the saved small test area, not
+the whole Bhadra AOI. Segmentation uses SAM ViT-H plus image-edge gap completion
+and geometric post-processing; classification uses RGB/texture evidence and
+reviewed objects. This is not field-validated mapping or entirely raw SAM output.
 
-The classification combines scene-trained random-forest colour/texture evidence,
-reviewed overlap, accepted footprints, and explicit visual review. **1,229 regions
-have specific categories; 1,405 remain uncertain/mixed (17.3% of total area).**
-The original region geometries are unchanged. Categories include water, trees,
-crops/low vegetation, bare ground/rock, roofs, engineered structures, roads, and
-uncertain. This is provisional image interpretation, not field-validated mapping.
-See `README_FULL_CLASSIFICATION.md` and the reports in `output/full_classification`.
-The `needs_review` layer is a subset of the main layer, not additional regions.
+## Cleanup scope and recovery
 
-For the previous unlabeled segmentation:
+55 superseded project snapshots, early experiment scripts/data, and generated
+previews were removed from the tracked snapshot. They remain on the local disk
+and in commit `903b93f`; `.gitignore` lists their exact paths. No repository-wide
+plugin files or unrelated Bhadra work were removed. No history was rewritten.
+Earlier method stages can be inspected at `903b93f`, including industrial and
+reviewed-test methods; current documentation describes the retained stages.
 
-In QGIS, load `data/esri_test_aligned.tif`, then
-`output/full_rectangle/unlabelled_regions.gpkg`, layer `regions`, and apply
-`output/full_rectangle/unlabelled_regions.qml`. These files are self-contained.
-The saved `Bhadra_Esri_Unlabelled_Segments.qgz` records the working live-Esri view.
+The cached composition and classification stages can run from this folder.
+Fresh SAM inference still requires the checkpoint at the path configured in
+`segment_full_rectangle.py`. `verify_full_rectangle.py` additionally checks the
+original accepted-building dataset in the original sibling-folder layout; this
+external provenance check is not required to open or verify the current snapshot.
+Use `verify_full_classification.py` to check the included classified source and
+`verify_current_snapshot.py` to check the portable current result/project.
 
-The unlabeled partition covers the entire inner test rectangle with no overlaps
-and no semantic classes. SAM ViT-H proposals and accepted footprints are combined;
-approximately 26% of pixels initially require image-edge gap completion, followed
-by small-fragment cleanup. The `origin` field identifies provenance. This is
-SAM-based post-processed segmentation, not entirely raw SAM output or proof of
-perfect physical-object boundaries.
-
-For industrial additions, use `output/reviewed_with_industrial.gpkg` and
-`README_INDUSTRIAL.md`. The original reviewed result remains at
-`output/reviewed_test_classes.gpkg` with its corresponding QML style.
-
-See `README_FULL_RECTANGLE.md`, `README_INDUSTRIAL.md`, and
-`README_REVIEWED_TEST.md` for methods and limitations. Verification results are
-in `output/full_rectangle/verification.json` and `coverage_report.json`. This is
-the saved small test rectangle, not the full Bhadra AOI or field-validated mapping.
+The separate working folder `HELPS/latest try` and its older outputs were not
+deleted. The mistaken historical commit in `ManimeghanathA/HELPS`, `Neha_branch`,
+was already reverted; this commit belongs only to `cv_ai_helps`.

@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "merged_source_class_ids": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8
+  ],
+  "merged_source_class_names": [
+    "Uncertain / mixed",
+    "Roads / tracks / paved surfaces",
+    "Trees / dense woody vegetation",
+    "Water",
+    "Buildings / roofs",
+    "Industrial / engineered structures"
+  ],
+  "merged_source_region_count": 2176,
+  "merged_area_m2": 503085.66645610344,
+  "total_regions_preserved": 2634,
+  "remaining_class_ids": [
+    3,
+    4
+  ],
+  "dissolved_class_count": 3,
+  "overlap_m2": 3.259629011154175e-09,
+  "vector_raster_identical": true,
+  "original_classification_unchanged": true,
+  "source_sha256": "114028adbe7992a06be9d16810ee49d4e7c383b19359850b196a19f9c1cdcf83",
+  "limitations": [
+    "Merging does not improve or validate the original classification",
+    "Industrial means the existing engineered-structure footprints, not a newly expanded industrial-site boundary",
+    "Disconnected pieces remain multipart; no gaps are filled or convex hulls created",
+    "Original score/method attributes in reclassified_regions describe the source classifications"
+  ]
+}

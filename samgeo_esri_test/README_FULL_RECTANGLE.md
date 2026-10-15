@@ -38,7 +38,8 @@ is reported in `coverage_report.json`.
 - `coverage_report.json`: coverage, overlap, validity, and provenance statistics.
 - `verification.json`: independent saved-vector/raster and footprint checks,
   produced by `python verify_full_rectangle.py`.
-- `unlabelled_overview.png` and `unlabelled_detail.png`: image-aligned previews.
+- `unlabelled_overview.png` and `unlabelled_detail.png`: regenerable previews,
+  excluded from the current Git snapshot.
 
 The two-pixel layout-frame border is excluded. The source samples are about
 0.485 m apart; this is pixel spacing, not a claim of imagery accuracy. Checks
@@ -48,5 +49,7 @@ Complete coverage does not mean every physical object is correctly delineated:
 shadows, textures, adjacent objects, and ambiguous edges still need visual review.
 No automatic semantic interpretation should be inferred from a region ID.
 
-Previous classified/industrial files are retained. The new QGIS project is saved
-separately as `Bhadra_Esri_Unlabelled_Segments.qgz` once the outputs pass review.
+The reviewed footprint input `output/reviewed_with_industrial.gpkg` is retained.
+The old `Bhadra_Esri_Unlabelled_Segments.qgz` project and early experiments are
+available in Git history at `903b93f`. The current project is
+`Bhadra_Esri_SAM_ViT_H_Current.qgz`; see `GIT_SNAPSHOT.md`.
